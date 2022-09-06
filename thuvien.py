@@ -16,7 +16,7 @@ def fine_print(x):
    tmp = '' 
    for i in x:
        for j in range():
-      tmp += str(i)
+          tmp += str(i)
    return tmp
    
 def bin_gen(i):
@@ -28,3 +28,39 @@ def bin_gen(i):
          bin_gen(i+1)
 bin_gen(0)
 
+#chuyen toan bo mang ve int or str
+print(list(map(int,["1","2"])))
+
+#in ra tap con
+
+from itertools import combinations
+comb = combinations([1, 2, 3], 2)
+for i in list(comb):
+    print (i)
+    
+#loc cac phan tu 
+vao = [s for s in vao if s != "null"]
+
+
+k = [s for s in range(1,4)]
+#chia cac chuoi giong nhau dung canh nhau
+from itertools import groupby
+test_str = 'ggggffggisssbbbeessssstt'
+res = ["".join(group) for ele, group in groupby(test_str)]
+print("Consecutive split string is : " + str(res))
+
+#chia chuỗi thành subword cạnh nhau
+def combos(s):
+  if not s:
+    return
+  yield (s,)
+  for i in range(1, len(s)):
+    for c in combos(s[i:]):
+      yield (s[:i],) + c
+for c in combos('Bang'):
+  print(c)
+
+# tim tap giao
+X = set([1, 3, 5, 7]) 
+Y = set([2, 3, 5, 8]) 
+print(X.intersection(Y))
