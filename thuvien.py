@@ -64,3 +64,22 @@ for c in combos('Bang'):
 X = set([1, 3, 5, 7]) 
 Y = set([2, 3, 5, 8]) 
 print(X.intersection(Y))
+
+#mo xoa file
+import os
+script = os.path.dirname(__file__)
+inp = os.path.join(script,"C:/Users/admin/Desktop/in.inp.txt")
+with open(inp, "r") as in_file:
+     print(in_file.read())
+
+
+mo = open("C:/Users/admin/Desktop/in.inp.txt","r")
+dong = open("C:/Users/admin/Desktop/out.inp.txt","w")
+dulieu = mo.readline().split()
+dong.write(1)
+
+#tinh thoi gian chuong trinh dang chay
+import time
+start = time.time()
+end = time.time()
+print(end-start)
